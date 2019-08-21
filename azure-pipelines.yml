@@ -50,3 +50,9 @@ stages:
         namespace: 'ztnamespa'
         command: 'init'
         arguments: '--client-only'
+    - task: HelmDeploy@0
+      inputs:
+        command: 'package'
+        chartPath: '$(System.DefaultWorkingDirectory)helmPackages/sampleChartWithOneService/sampleapp'
+        chartVersion: 'v1'
+        updateDependency: true

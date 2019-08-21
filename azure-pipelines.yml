@@ -53,6 +53,6 @@ stages:
     - task: HelmDeploy@0
       inputs:
         command: 'package'
-        chartPath: '$(System.DefaultWorkingDirectory)helmPackages/sampleChartWithOneService/sampleapp'
+        chartPath: '$(System.DefaultWorkingDirectory)/draft-helm-nodejs/charts/javascript'
         chartVersion: 'v1'
         updateDependency: true
